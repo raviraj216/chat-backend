@@ -1,0 +1,180 @@
+{
+  "info": {
+    "_postman_id": "0c8fb259-e83a-4cda-b1d8-302fb50c65ff",
+    "name": "chat-backend",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "24288636"
+  },
+  "item": [
+    {
+      "name": "Create Chat",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"userAId\":\"user-a\",\"userBId\":\"user-c\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/chat/create",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "chat",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Send Message",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"senderId\":\"user-a\",\"text\":\"hello\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/chat/0357f294-9445-46f3-9504-f12f07f2aecb/message/send",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "chat",
+            "0357f294-9445-46f3-9504-f12f07f2aecb",
+            "message",
+            "send"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Message",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/chat/0357f294-9445-46f3-9504-f12f07f2aecb/messages?limit=50",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "chat",
+            "0357f294-9445-46f3-9504-f12f07f2aecb",
+            "messages"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "50"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Read Message",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"userId\":\"user-b\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/chat/0357f294-9445-46f3-9504-f12f07f2aecb/message/Pdddj4etUdqTHpObwXrd/read",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "chat",
+            "0357f294-9445-46f3-9504-f12f07f2aecb",
+            "message",
+            "Pdddj4etUdqTHpObwXrd",
+            "read"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "lastseen",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"userId\":\"user-a\",\"messageId\":\"nKL9TIjGPzBKrqv72FiL\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/chat/0357f294-9445-46f3-9504-f12f07f2aecb/lastseen",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "chat",
+            "0357f294-9445-46f3-9504-f12f07f2aecb",
+            "lastseen"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "List of chats",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/user/user-a/chats",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "user",
+            "user-a",
+            "chats"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
